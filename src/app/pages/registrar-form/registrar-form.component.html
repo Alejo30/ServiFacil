@@ -1,0 +1,66 @@
+<div class="container mb-2" [ngStyle]="{'margin-top': '5%'}">
+    <div class="row justify-content-center border border-dark p-2">
+        <div class="col-12">
+            <h1 class="text-center">¡Crea tu perfil Aquí!</h1>
+            <h1 class="text-center">¡Y empieza a disfrutar de los servicios en ServiFacil!</h1>
+            <form class="my-5">
+                <div class=" form-row justify-content-center">
+                    <div class="form-group col-lg-8">
+                        <label>Cedula* :</label>
+                        <input name="cedula" class="form-control form-control-sm" type="text" [(ngModel)]="agregarRegistro.cedula" required/>
+                    </div>
+                    <!--DIV CEDULA-->
+                    <div class="form-group col-lg-8">
+                        <label>Nombres* :</label>
+                        <input name="nombres" class="form-control form-control-sm" type="text" [(ngModel)]="agregarRegistro.nombres" required/>
+                    </div>
+                    <!--DIV NOMBRES-->
+                    <div class="form-group col-lg-8">
+                        <label>Apellidos* :</label>
+                        <input name="apellidos" class="form-control form-control-sm" type="text" [(ngModel)]="agregarRegistro.apellidos" required/>
+                    </div>
+                    <!--DIV APELLIDOS-->
+                    <div class="form-group col-lg-8">
+                        <label>Correo* :</label>
+                        <input name="correo" class="form-control form-control-sm" type="text" [(ngModel)]="agregarRegistro.correo" required/>
+                    </div>
+                    <!--DIV CORREO-->
+                    <div class="form-group col-lg-8">
+                        <label>Fecha de Nacimiento :</label>
+                        <input name="fecha_nacimiento" class="form-control form-control-sm" type="date" [(ngModel)]="agregarRegistro.fecha_nacimiento" required/>
+                    </div>
+                    <!--DIV FECHA NAC-->
+                    <div class="form-group col-lg-8">
+                        <label>Telefono* :</label>
+                        <input name="telefono" class="form-control form-control-sm" type="number" [(ngModel)]="agregarRegistro.telefono" required/>
+                    </div>
+                    <!--DIV TELEFONO-->
+
+                    <div class="form-group col-lg-8">
+                        <label>Calle Principal* :</label>
+                        <input name="callePrincipal" class="form-control form-control-sm" type="text" [(ngModel)]="agregarRegistro.direccion.callePrincipal" required/>
+                    </div>
+                    <!--DIV CALLE PRINCIPAL-->
+                    <div class="form-group col-lg-8">
+                        <label>Calle Secundaria* :</label>
+                        <input name="calleSecundaria" class="form-control form-control-sm" type="text" [(ngModel)]="agregarRegistro.direccion.calleSecundaria" required/>
+                    </div>
+                    <!--DIV CALLE SECUNDARIA-->
+                    <div class="form-group col-lg-8">
+                        <label>*Numero de Casa :</label>
+                        <input name="numeroLocal" class="form-control form-control-sm" type="text" [(ngModel)]="agregarRegistro.direccion.numero_local" />
+                    </div>
+                    <!--DIV NUMERO CASA-->
+                </div>
+                <div class="form-row justify-content-center">
+                    <div class="col-md-4">
+                        <button (click)="addPersona()" class="btn btn-primary btn-block ">Guardar</button>
+                    </div>
+                    <div class="col-md-4">
+                        <button class="btn btn-success btn-block">Cancelar</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

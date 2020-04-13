@@ -14,78 +14,26 @@ export class MenuComponent implements OnInit {
   ngOnInit() {
     this.items = [
       {
-        label: 'Categorias',
-        icon: 'pi pi-fw pi-file',
-        items: [{
-                label: 'New', 
-                icon: 'pi pi-fw pi-plus',
-                items: [
-                    {label: 'Project'},
-                    {label: 'Other'},
-                ]
-            },
-            {label: 'Open'},
-            {separator:true},
-            {label: 'Quit'}
-        ]
+        label: 'Inicio',
+        icon: 'pi pi-fw pi-home',
+        command: () => this.router.navigate(["inicio"])
     },
     {
-        label: 'Edit',
-        icon: 'pi pi-fw pi-pencil',
-        items: [
-            {label: 'Delete', icon: 'pi pi-fw pi-trash'},
-            {label: 'Refresh', icon: 'pi pi-fw pi-refresh'}
-        ]
+        label: 'Categoria', icon: 'pi pi-fw pi-th-large'
     },
     {
-        label: 'Ayuda',
-        icon: 'pi pi-fw pi-question',
-        items: [
-            {
-                label: 'Contents'
-            },
-            {
-                label: 'Search', 
-                icon: 'pi pi-fw pi-search', 
-                items: [
-                    {
-                        label: 'Text', 
-                        items: [
-                            {
-                                label: 'Workspace'
-                            }
-                        ]
-                    },
-                    {
-                        label: 'File'
-                    }
-            ]}
-        ]
+        label: 'Productos', icon: 'pi pi-fw pi-tag'
     },
     {
-        label: 'Configuracion',
-        icon: 'pi pi-fw pi-cog',
-        items: [
-            {
-                label: 'Edit',
-                icon: 'pi pi-fw pi-pencil',
-                items: [
-                    {label: 'Save', icon: 'pi pi-fw pi-save'},
-                    {label: 'Update', icon: 'pi pi-fw pi-save'},
-                ]
-            },
-            {
-                label: 'Other',
-                icon: 'pi pi-fw pi-tags',
-                items: [
-                    {label: 'Delete', icon: 'pi pi-fw pi-minus'}
-                ]
-            }
-        ]
+        label: 'Promociona tus Servicios', icon: 'pi pi-fw pi-globe'
     },
-    {separator:true},
     {
-        label: 'Perfil', icon: 'pi pi-fw pi-times'
+        label: 'Iniciar Sesión', icon: 'pi pi-fw pi-sign-in',
+        command: (url) => this.router.navigate(["login"])
+    },
+    {separator: true},
+    {
+        label: 'Perfil', icon: 'pi pi-fw pi-user'
     }
     ];
   }

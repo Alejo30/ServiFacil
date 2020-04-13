@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { NgModule } from '@angular/core';
+import {FormsModule} from '@angular/forms'
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -23,15 +24,23 @@ import { TableModule } from "primeng/table";
 import { EditorModule } from "primeng/editor";
 import {CardModule} from 'primeng/card';
 
-import { HttpClientModule } from "@angular/common/http";
+import {HttpClient, HttpClientModule } from "@angular/common/http";
 import { InicioComponent } from './pages/inicio/inicio.component';
+import { RegistrarFormComponent } from './pages/registrar-form/registrar-form.component';
+
+//servicios
+import { PersonaService } from './servicios/persona.service';
+import { PersonaComponent } from './pages/persona/persona.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     MenuComponent,
     LoginComponent,
-    InicioComponent
+    InicioComponent,
+    RegistrarFormComponent,
+    PersonaComponent
   ],
   imports: [
     BrowserModule,
@@ -51,9 +60,10 @@ import { InicioComponent } from './pages/inicio/inicio.component';
     InputTextareaModule,
     EditorModule,
     TableModule,
-    CardModule
+    CardModule,
+    FormsModule
   ],
-  providers: [],
+  providers: [PersonaService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,0 +1,30 @@
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <table class="table table-bordered table-striped table-hover table-sm table-secondary">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>No.</th>
+                        <th>Cedula</th>
+                        <th>Nombres</th>
+                        <th>Apellidos</th>
+                        <th>Contacto-Correo</th>
+                        <th>*</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let item of personas">
+                        <td>{{ item._id }}</td>
+                        <td>{{ item.cedula }}</td>
+                        <td>{{ item.nombres }}</td>
+                        <td>{{ item.apellidos }}</td>
+                        <td>{{ item.correo}}</td>
+                        <td>
+                            <button (click)="delPersonas(item._id)" class="btn btn-primary">Eliminar</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
