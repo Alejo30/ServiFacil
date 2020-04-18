@@ -33,10 +33,12 @@ export class MenuComponent implements OnInit {
     },
     {separator: true},
     {
-        label: 'Perfil', icon: 'pi pi-fw pi-user'
+        label: 'Mi Perfil', icon: 'pi pi-fw pi-user',
+        command: (url) => this.router.navigate(["miPerfil"])
     },
     {
-      label: 'Administración', icon: 'pi pi-fw pi-user'
+      label: 'Administración', icon: 'pi pi-fw pi-user',
+      command: (url) => this.router.navigate(["login"])
   }
     ];
   }
