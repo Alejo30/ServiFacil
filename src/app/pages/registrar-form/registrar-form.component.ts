@@ -8,8 +8,8 @@ import { PersonaService } from '../../servicios/persona.service';
   styleUrls: ['./registrar-form.component.css']
 })
 export class RegistrarFormComponent implements OnInit {
-  
-  agregarRegistro: any = 
+
+  agregarRegistro: any =
   {
     cedula: "",
 	  nombres: "",
@@ -26,11 +26,11 @@ export class RegistrarFormComponent implements OnInit {
 
   personas: any
 
-  constructor(private personaService: PersonaService) { 
+  constructor(private personaService: PersonaService) {
     this.obtenerPersonas
   }
 
-  obtenerPersonas(){
+  obtenerPersonas() {
     this.personaService.getAllPersonas().subscribe( resultado => {
         this.personas = resultado.personas;
     },
@@ -42,18 +42,18 @@ export class RegistrarFormComponent implements OnInit {
   ngOnInit() {
   }
 
-  delPersona(identificador){
+  delPersona(identificador) {
     console.log('evento eliminar');
-    
+
     this.personaService.delPersonas(identificador).subscribe( resultado => {
       this.obtenerPersonas();
     },
     error => {
       console.log(JSON.stringify(error));
-    })
+    });
   }
 
-  addPersona(){
+  addPersona() {
     console.log('evento agregar');
 
     this.personaService.addPersonas(this.agregarRegistro).subscribe( resultado => {
@@ -62,7 +62,7 @@ export class RegistrarFormComponent implements OnInit {
     },
     error => {
       console.log(JSON.stringify(error));
-    } )
+    });
   }
 
 }

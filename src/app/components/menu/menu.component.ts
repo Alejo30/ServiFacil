@@ -34,7 +34,10 @@ export class MenuComponent implements OnInit {
     {separator: true},
     {
         label: 'Perfil', icon: 'pi pi-fw pi-user'
-    }
+    },
+    {
+      label: 'Administración', icon: 'pi pi-fw pi-user'
+  }
     ];
   }
 
